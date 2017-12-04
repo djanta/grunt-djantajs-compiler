@@ -1,28 +1,29 @@
 {
   "name": "grunt-djantajs-compiler",
-  "description": "The best Grunt plugin ever.",
+  "description": "Intuitive djanta-rc grunt compiler",
   "version": "0.0.0",
-  "homepage": "https://github.com/djantaio/grunt-djantajs-compiler",
+  "homepage": "https://github.com/djanta/grunt-djantajs-compiler",
   "author": {
-    "name": "team.pulsar@djanta.io",
-    "email": "team.pulsar@djanta.io",
+    "name": "team.dev@djanta.io",
+    "email": "team.dev@djanta.io",
     "url": "www.djanta.io"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com/djantaio/grunt-djantajs-compiler.git"
+    "url": "git@github.com/djanta/grunt-djantajs-compiler.git"
   },
   "bugs": {
-    "url": "https://github.com/djantaio/grunt-djantajs-compiler/issues"
+    "url": "https://github.com/djanta/grunt-djantajs-compiler/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/djantaio/grunt-djantajs-compiler/blob/master/LICENSE"
+      "url": "https://github.com/djanta/grunt-djantajs-compiler/blob/master/LICENSE"
     }
   ],
   "engines": {
-    "node": ">= 0.8.0"
+    "node": ">=7.0.0",
+    "npm": ">=4.6.0"
   },
   "scripts": {
     "test": "grunt test"
@@ -36,12 +37,13 @@
   "keywords": [
     "gruntplugin",
     "djantarc",
-    "annotation"
+    "annotation",
+    "djanta-rc"
   ],
   "dependencies": {
     "dateformat": "^2.0.0",
-    "djantajs-compiler-core": "file:../djantajs-compiler-core",
-    "djantajs-compiler-rc": "file:../djantajs-compiler-rc",
+    "djantajs-compiler-core": "git+ssh://git@github.com/djanta/djantajs-compiler-core.git#develop",
+    "djantajs-compiler-rc": "git+ssh://git@github.com/djanta/djantajs-compiler-rc.git#develop",
     "lodash": "^4.17.4",
     "semver": "^5.3.0"
   }
