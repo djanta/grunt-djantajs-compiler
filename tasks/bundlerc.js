@@ -24,6 +24,7 @@ const DEFAULT_EXCLUDES = [
   'Gulp*.js',
   'gulp-*/**',
   'example*/**/*',
+  '**/**/*.spec.js'
 ];
 
 module.exports = function (grunt) {
