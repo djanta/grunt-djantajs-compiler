@@ -1,4 +1,16 @@
 
+* __Incrementing to version 0.0.1__
+
+    [djantaio](mailto:github@djanta.io) - Tue, 27 Mar 2018 11:40:41 -0500
+    
+    
+
+* __0.0.1__
+
+    [djantaio](mailto:github@djanta.io) - Tue, 27 Mar 2018 11:40:22 -0500
+    
+    
+
 * __Fixing package dependency__
 
     [stanislaska](mailto:koffi.ass@gmail.com) - Tue, 27 Mar 2018 11:39:06 -0500
