@@ -42,8 +42,8 @@
   ],
   "dependencies": {
     "dateformat": "^2.0.0",
-    "djantajs-compiler-core": "git+ssh://git@github.com/djanta/djantajs-compiler-core.git#develop",
-    "djantajs-compiler-rc": "git+ssh://git@github.com/djanta/djantajs-compiler-rc.git#develop",
+    "djantajs-compiler-core": "git+ssh://git@github.com/djanta/djantajs-compiler-core.git#v1.0.0",
+    "djantajs-compiler-rc": "git+ssh://git@github.com/djanta/djantajs-compiler-rc.git#v1.0.0",
     "lodash": "^4.17.4",
     "semver": "^5.3.0"
   }
