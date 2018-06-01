@@ -5,7 +5,7 @@
 [![Travis](https://img.shields.io/travis/djanta/grunt-djantajs-compiler/master.svg?style=flat-square&label=unix)](https://travis-ci.org/djanta/grunt-djantajs-compiler)
 [![Maintainability](https://api.codeclimate.com/v1/badges/e993001806df976e7459/maintainability)](https://codeclimate.com/github/djanta/grunt-djantajs-compiler/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/e993001806df976e7459/test_coverage)](https://codeclimate.com/github/djanta/grunt-djantajs-compiler/test_coverage)
-[![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg?style=flat-square)](https://gitter.im/djantaio/djantajs?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg?style=flat-square)](https://gitter.im/djantajs/tools?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 > djantajs grunt resource compiler
 
