@@ -1,6 +1,13 @@
 # grunt-djantajs-compiler
 
-> The best Grunt plugin ever.
+[![npm version](https://img.shields.io/npm/v/djantajs-runtime?style=flat-square)](https://www.npmjs.com/package/djantajs-runtime)
+[![npm downloads](https://img.shields.io/npm/dm/djantajs-runtime.svg?style=flat-square)](https://www.npmjs.com/package/djantajs-runtime)
+[![Travis](https://img.shields.io/travis/djanta/djantajs-runtime/master.svg?style=flat-square&label=unix)](https://travis-ci.org/djanta/djantajs-runtime)
+[![Maintainability](https://api.codeclimate.com/v1/badges/e993001806df976e7459/maintainability)](https://codeclimate.com/github/djanta/grunt-djantajs-compiler/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/e993001806df976e7459/test_coverage)](https://codeclimate.com/github/djanta/grunt-djantajs-compiler/test_coverage)
+[![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg?style=flat-square)](https://gitter.im/djantaio/djantajs?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
+> djantajs grunt resource compiler
 
 ## Getting Started
 This plugin requires Grunt `~0.4.5`
@@ -8,7 +15,7 @@ This plugin requires Grunt `~0.4.5`
 If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
 
 ```shell
-npm install grunt-djantajs-compiler-core --save-dev
+npm i grunt-djantajs-compiler-core --save-dev
 ```
 
 Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
