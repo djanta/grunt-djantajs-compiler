@@ -8,7 +8,7 @@
 
 'use strict';
 
-const Path = require ('path');
+const path = require ('path');
 
 module.exports = function (grunt) {
 
@@ -47,7 +47,7 @@ module.exports = function (grunt) {
           ]
         },
         project: {
-          src: Path.resolve (__dirname, 'test', 'project'),
+          src: path.resolve(__dirname, 'test', 'project'),
           clean: true,
           files: ['.djanta-rc.json']
         }
@@ -56,7 +56,7 @@ module.exports = function (grunt) {
 
     // Unit tests.
     nodeunit: {
-      tests: ['test/*_test.js']
+      tests: ['test/*.spec.js']
     }
   });
 

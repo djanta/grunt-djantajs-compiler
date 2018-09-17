@@ -8,12 +8,11 @@
 
 'use strict';
 
-const { Compiler } = require('djantajs-compiler-core');
-const { ModuleBase } = require('djantajs-compiler-rc');
-const { Handler } = require('djantajs-compiler-rc');
+let { Compiler } = require('@djanta/djantajs-compiler-core');
+let { ModuleBase, Handler } = require('@djanta/djantajs-compiler-rc');
+let _ = require ('lodash');
 
-const _ = require ('lodash');
-
+const NAME = 'bundlerc';
 const DEFAULT_FILTER = '**/*.js';
 const DEFAULT_EXCLUDES = [
   'node_modules/**/*',
@@ -28,74 +27,92 @@ const DEFAULT_EXCLUDES = [
 ];
 
 module.exports = function (grunt) {
+  /**
+   * Registering our compile task
+   */
+  grunt.registerMultiTask(NAME, 'djantajs Grunt compiler', function () {
+    let self = this;
+    let rt$0 = new Compiler(_.defaults({
+      error: grunt.fail.fatal,
+      warn: grunt.fail.warn,
+      log: grunt.log.writeln
+    }));
 
-  grunt.registerMultiTask('bundlerc', 'Grunt provided task to build your project and then generate .djanta-rc', function() {
-    let self = this, rt$0 = new Compiler({error: grunt.fail.fatal, warn: grunt.fail.warn, log: grunt.log.writeln}), handlers = [new Handler(rt$0)],
-      annotations = [{src: ModuleBase, excludes: DEFAULT_EXCLUDES, pattern: DEFAULT_FILTER}], gruntify = {};
+    let handlers = [new Handler(rt$0)];
+    let annotations = [{
+      src: ModuleBase,
+      excludes: DEFAULT_EXCLUDES,
+      pattern: DEFAULT_FILTER
+    }];
+
+    let gruntify = _.defaults({});
 
     [
       {
         name: 'project',
         required: true,
         properties: {
-          src: {
-            type: 'directory',
-            required: true
-          },
-          clean: {
-            type: 'boolean',
-            required: false
-          },
-          files: {
-            required: false
-          }
+          src: { type: 'directory', required: true},
+          clean: { type: 'boolean', required: false },
+          files: { required: false }
         }
       },
       {
         name: 'annotations',
         required: false,
         options: {
-          //excludes: self.data.option['excludes'] || DEFAULT_EXCLUDES,
-          //pattern: self.data.option['pattern'] || DEFAULT_FILTER,
+          // excludes: self.data.option['excludes'] || DEFAULT_EXCLUDES,
+          // pattern: self.data.option['pattern'] || DEFAULT_FILTER,
         }
       },
       {
         name: 'handlers',
         required: false,
-        //data: self.data.handlers
+        // data: self.data.handlers
       }
-    ].forEach((opt) => {
-
-      if (true === opt.required && !(opt.name in self.data)) {
-        grunt.fail.fatal ('['+ opt.name +'] option is missing', -1);
+    ].forEach((argv) => {
+      if (true === argv.required && _.isNil(self.data[argv.name])) {
+        grunt.fail.fatal('['+ argv.name +'] option is missing', -1);
       }
       else {
-        if ('properties' in opt) {
-          Object.keys(opt.properties).forEach((property) => {
-            if (true === opt.properties[property].required && !self.data[opt.name][property]) {
-              grunt.fail.fatal ('The following property: ['+ property +'] is required by: ['+opt.name+']', -1);
+        if (!_.isNil(argv['properties'])) {
+          _.each(argv.properties, (val, property) => {
+            if (true === val.required && !self.data[argv.name][property]) {
+              grunt.fail.fatal ('The following property: ['+ property
+                +'] is required by: ['+ argv.name +']', -1);
             }
             else {
-              switch (opt.properties[property].type) {
+              switch(val.type) {
                 case 'directory':
-                  if (!grunt.file.isDir(self.data[opt.name][property])) {
-                    grunt.fail.fatal('the property: [' + opt.name + '.' + property + '] with value ['
-                      + self.data[opt.name][property] +'] must be a directory.', -1);
+                  if (!grunt.file.isDir(self.data[argv.name][property])) {
+                    grunt.fail.fatal('the property: [' + argv.name + '.'
+                      + property + '] with value ['
+                      + self.data[argv.name][property]
+                      +'] must be a directory.',
+                    -1);
                   }
                 break;
+                // Skip default
               }
             }
-          })
+          });
         }
       }
-      gruntify[opt.name] = self.data[opt.name];
+      gruntify[argv.name] = self.data[argv.name];
     });
 
-    rt$0.compile(_.merge({}, gruntify, {handlers: handlers, annotations: annotations}), (err, result) => {
-      if (!_.isNull(err)) grunt.log.ok('Generating done!');
+    // compile the annotation context ...
+    rt$0.compile(_.merge({}, gruntify, {
+      handlers: handlers,
+      annotations: annotations
+    }), (err, result) => {
+      if (!_.isNull(err)) {
+        // grunt.log.ok('Generating done!');
+      }
     })
       .then ((result) => {
-        grunt.log.writeln(result);
+        // grunt.log.writeln(result);
+        grunt.log.ok('Generating done!');
       })
       .catch((ex) => {
         grunt.fail.fatal(ex);

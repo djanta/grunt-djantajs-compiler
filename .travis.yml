@@ -1,0 +1,62 @@
+sudo: required
+language: node_js
+rvm:
+  - 2.2.0
+dist: trusty
+node_js:
+  - '8'
+branches:
+  except:
+    - /^pr\\..*/"=
+    - "/^features\\\\..*/"
+before_install:
+  - git clone https://github.com/djanta/travis-npm-deploy.git ~/travis-npm-deploy
+  - chmod +x ~/travis-npm-deploy/deploy.sh && chmod +x ~/travis-npm-deploy/npm/*.sh
+  - bash ~/travis-npm-deploy/deploy.sh --git-config
+  # Install code climate tools ...
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+install:
+  - bash ~/travis-npm-deploy/deploy.sh --install
+  - npm i --verbose
+  - 'echo "repo_token: $COVERALLS_REPO_TOKEN" > "./.coveralls.yml"'
+  - npm run snyk:login -- $SNYK_TOKEN
+script:
+  - npm test
+  - bundle exec rspec
+after_script:
+  - echo "Running after script"
+
+  # Running code climate reporter ...
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+after_success:
+  - npm run snyk:monitor
+  - npm run coverage
+before_deploy:
+  - bash ~/travis-npm-deploy/deploy.sh login --user=$NPM_USER --password=$NPM_PWD --email=$NPM_EMAIL #--scope=$NPM_SCOPE
+deploy:
+  - provider: script
+    skip_cleanup: true
+    email: "$NPM_EMAIL"
+    script: "~/travis-npm-deploy/deploy.sh"
+    on:
+      tags: true
+      repo: djanta/grunt-djantajs-compiler
+after_deploy:
+  - bash ~/travis-npm-deploy/deploy.sh logout
+notifications:
+  email: false
+  slack:
+    rooms:
+      - "$SLACK_ROOM_URL"
+    on_success: always
+    template:
+      - Build <%{build_url}|#%{build_number}> (<%{compare_url}|%{commit}>) of %{repository}@%{branch}
+        by %{author} %{result} in %{duration}
+  webhooks:
+    urls:
+      - "$WEBHOOK_GITTER"
+    on_success: change
+    on_failure: always
+    on_start: never

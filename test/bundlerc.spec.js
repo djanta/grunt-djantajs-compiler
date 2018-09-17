@@ -23,7 +23,7 @@ const grunt = require('grunt');
  */
 
 exports.bundlerc = {
-  setUp: function (done) {
+  setUp: (done) => {
     done();
   },
 

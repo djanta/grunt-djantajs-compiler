@@ -1,50 +1,14 @@
+# Changelog
+All notable changes to this project will be documented in this file.
 
-* __Incrementing to version 0.1.0__
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-    [djantaio](mailto:github@djanta.io) - Tue, 27 Mar 2018 11:41:04 -0500
-    
-    
+## [Unreleased]
 
-* __0.1.0__
+## [1.0.3] - 2018-09-17
+### Add
+- Refactoring `@djanta/*` scope dependencies
 
-    [djantaio](mailto:github@djanta.io) - Tue, 27 Mar 2018 11:40:53 -0500
-    
-    
-
-* __Incrementing to version 0.0.1__
-
-    [djantaio](mailto:github@djanta.io) - Tue, 27 Mar 2018 11:40:41 -0500
-    
-    
-
-* __0.0.1__
-
-    [djantaio](mailto:github@djanta.io) - Tue, 27 Mar 2018 11:40:22 -0500
-    
-    
-
-* __Fixing package dependency__
-
-    [stanislaska](mailto:koffi.ass@gmail.com) - Tue, 27 Mar 2018 11:39:06 -0500
-    
-    
-
-* __Fixing compilier resource filtering__
-
-    [stanislaska](mailto:koffi.ass@gmail.com) - Fri, 5 Jan 2018 20:19:32 -0500
-    
-    
-
-* __Fix: djantajs-compiler dependencies__
-
-    [stanislaska](mailto:koffi.ass@gmail.com) - Mon, 4 Dec 2017 10:36:16 -0600
-    
-    
-
-* __first commit__
-
-    [stanislaska](mailto:koffi.ass@gmail.com) - Mon, 4 Dec 2017 09:29:00 -0600
-    
-    
-
-
+[Unreleased]: https://github.com/djanta/djantajs-compiler-core/compare/v1.0.1...HEAD
+[1.0.0]: https://github.com/djanta/djantajs-compiler-core/compare/v1.0.0...v1.0.1
