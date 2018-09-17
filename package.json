@@ -39,7 +39,7 @@
   "scripts": {
     "test": "grunt test --debug --stack",
 
-    "prepare": "npm run snyk-protect",
+    "prepare": "#npm run snyk-protect",
     "snyk": "./node_modules/.bin/snyk test --file=./package.json",
     "snyk:publish": "./node_modules/.bin/snyk wizard --file=./package.json",
     "snyk:monitor": "./node_modules/.bin/snyk monitor --file=./package.json",
