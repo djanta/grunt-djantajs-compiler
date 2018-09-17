@@ -37,7 +37,14 @@
     "node": ">=7.0.0"
   },
   "scripts": {
-    "test": "grunt test --debug --stack"
+    "test": "grunt test --debug --stack",
+
+    "prepare": "npm run snyk-protect",
+    "snyk": "./node_modules/.bin/snyk test --file=./package.json",
+    "snyk:publish": "./node_modules/.bin/snyk wizard --file=./package.json",
+    "snyk:monitor": "./node_modules/.bin/snyk monitor --file=./package.json",
+    "snyk:login": "./node_modules/.bin/snyk auth --",
+    "snyk-protect": "./node_modules/.bin/snyk protect"
   },
   "publishConfig": {
     "access": "public"
@@ -47,7 +54,8 @@
     "grunt-contrib-jshint": "^1.1.0",
     "grunt-contrib-clean": "^2.0.0",
     "grunt-contrib-nodeunit": "^2.0.0",
-    "grunt": "^1.0.3"
+    "grunt": "^1.0.3",
+    "snyk": "^1.95.3"
   },
   "dependencies": {
     "dateformat": "^3.0.3",
