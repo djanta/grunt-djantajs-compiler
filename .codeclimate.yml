@@ -9,7 +9,11 @@ plugins:
     enabled: true
   fixme:
     enabled: true
-checks:
+    config:
+      strings:
+      - FIXME
+      - BUG
 exclude_patterns:
   - test/**/*
   - examples/**/*
+  - node_modules/**/*
