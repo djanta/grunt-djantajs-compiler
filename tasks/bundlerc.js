@@ -43,11 +43,13 @@ module.exports = function (grunt) {
       log: grunt.log.writeln
     }));
 
+    let opts = self.options() || {};
+
     let handlers = [new Handler(rt$0)];
     let annotations = [{
-      src: ModuleBase,
-      excludes: DEFAULT_EXCLUDES,
-      pattern: DEFAULT_FILTER
+      pattern: _.isNil(opts.pattern) ? DEFAULT_FILTER : opts.pattern,
+      excludes: _.isNil(opts.excludes) ? DEFAULT_EXCLUDES : opts.excludes,
+      src: ModuleBase
     }];
 
     let gruntify = _.defaults({});
@@ -115,12 +117,7 @@ module.exports = function (grunt) {
         // grunt.log.ok('Generating done!');
       }
     })
-      .then ((result) => {
-        // grunt.log.writeln(result);
-        grunt.log.ok('Generating done!');
-      })
-      .catch((ex) => {
-        grunt.fail.fatal(ex);
-      });
+      .then ((result) => grunt.log.ok('Generating done!'))
+      .catch((ex) => grunt.fail.fatal(ex));
   });
 };

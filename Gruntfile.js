@@ -11,7 +11,6 @@
 const path = require ('path');
 
 module.exports = function (grunt) {
-
   // Project configuration.
   grunt.initConfig({
     jshint: {
@@ -32,20 +31,20 @@ module.exports = function (grunt) {
 
     // Configuration to be run (and then tested).
     bundlerc: {
-      compile: {
-        option: {
-          pattern: '**/*.js',
-          excludes: [
-            'node_modules/**/*',
-            'Grunt*.js',
-            'grunt-*/**',
-            'test/**/*',
-            'tests/**/*',
-            'Gulp*.js',
-            'gulp-*/**',
-            'example*/**/*',
-          ]
-        },
+      options: {
+        pattern: '**/*.js',
+        excludes: [
+          'node_modules/**/*',
+          'Grunt*.js',
+          'grunt-*/**',
+          'test/**/*',
+          'tests/**/*',
+          'Gulp*.js',
+          'gulp-*/**',
+          'example*/**/*',
+        ]
+      },
+      default: {
         project: {
           src: path.resolve(__dirname, 'test', 'project'),
           clean: true,
