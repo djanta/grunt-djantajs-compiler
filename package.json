@@ -38,6 +38,7 @@
   },
   "scripts": {
     "test": "grunt test --debug --stack",
+    "test:nyc": "./node_modules/.bin/nyc --reporter=lcov grunt test",
 
     "prepare": "#npm run snyk-protect",
     "snyk": "./node_modules/.bin/snyk test --file=./package.json",
@@ -55,7 +56,8 @@
     "grunt-contrib-clean": "^2.0.0",
     "grunt-contrib-nodeunit": "^2.0.0",
     "grunt": "^1.0.3",
-    "snyk": "^1.95.3"
+    "snyk": "^1.95.3",
+    "nyc": "^13.0.1"
   },
   "dependencies": {
     "dateformat": "^3.0.3",
