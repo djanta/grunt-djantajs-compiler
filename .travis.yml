@@ -1,7 +1,5 @@
 sudo: required
 language: node_js
-rvm:
-  - 2.2.0
 dist: trusty
 node_js:
   - '8'
