@@ -21,17 +21,16 @@ install:
   - bash ~/travis-npm-deploy/deploy.sh --install
   - npm i --verbose
   - 'echo "repo_token: $COVERALLS_REPO_TOKEN" > "./.coveralls.yml"'
-  - npm run snyk:login -- $SNYK_TOKEN
+  #- npm run snyk:login -- $SNYK_TOKEN
 script:
   - npm test
   - bundle exec rspec
 after_script:
   - echo "Running after script"
-
   # Running code climate reporter ...
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
 after_success:
-  - npm run snyk:monitor
+  #- npm run snyk:monitor
   - npm run coverage
 before_deploy:
   - bash ~/travis-npm-deploy/deploy.sh login --user=$NPM_USER --password=$NPM_PWD --email=$NPM_EMAIL #--scope=$NPM_SCOPE
