@@ -24,6 +24,7 @@
       "url": "https://github.com/djanta/grunt-djantajs-compiler/blob/master/LICENSE"
     }
   ],
+  "license": "MIT",
   "keywords": [
     "gruntplugin",
     "djantarc",
