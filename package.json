@@ -1,7 +1,7 @@
 {
   "name": "grunt-djantajs-compiler",
   "description": "djantajs grunt annotation resource compiler",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "https://github.com/djanta/grunt-djantajs-compiler",
   "author": {
     "name": "team.dev@djantajs.io",
