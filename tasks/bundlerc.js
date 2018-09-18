@@ -8,6 +8,7 @@
 
 'use strict';
 
+let util = require('util');
 let { Compiler } = require('@djanta/djantajs-compiler-core');
 let { ModuleBase, Handler } = require('@djanta/djantajs-compiler-rc');
 let _ = require ('lodash');
@@ -26,6 +27,10 @@ const DEFAULT_EXCLUDES = [
   '**/**/*.spec.js'
 ];
 
+/**
+ * Exporting grunt task handler
+ * @param {Grunt} grunt a valid grunt instance
+ */
 module.exports = function (grunt) {
   /**
    * Registering our compile task
@@ -72,24 +77,24 @@ module.exports = function (grunt) {
       }
     ].forEach((argv) => {
       if (true === argv.required && _.isNil(self.data[argv.name])) {
-        grunt.fail.fatal('['+ argv.name +'] option is missing', -1);
+        grunt.fail.fatal(`${argv.name} option is missing`, -1);
       }
       else {
         if (!_.isNil(argv['properties'])) {
           _.each(argv.properties, (val, property) => {
             if (true === val.required && !self.data[argv.name][property]) {
-              grunt.fail.fatal ('The following property: ['+ property
-                +'] is required by: ['+ argv.name +']', -1);
+              grunt.fail.fatal(`The following property: [${property}] 
+                is required by: [${argv.name}]`, -1);
             }
             else {
               switch(val.type) {
                 case 'directory':
                   if (!grunt.file.isDir(self.data[argv.name][property])) {
-                    grunt.fail.fatal('the property: [' + argv.name + '.'
-                      + property + '] with value ['
-                      + self.data[argv.name][property]
-                      +'] must be a directory.',
-                    -1);
+                    let msg = util.format('the property: [%s.%s] ' +
+                      'with value [%s] must be a directory', argv.name,
+                      property, self.data[argv.name][property]);
+
+                    grunt.fail.fatal(msg, -1);
                   }
                 break;
                 // Skip default
