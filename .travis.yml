@@ -28,7 +28,8 @@ after_script:
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
 after_success:
   #- npm run snyk:monitor
-  - npm run coverage
+  #- npm run coverage
+  - echo "No task to run"
 before_deploy:
   - bash ~/travis-npm-deploy/deploy.sh login --user=$NPM_USER --password=$NPM_PWD --email=$NPM_EMAIL #--scope=$NPM_SCOPE
 deploy:
