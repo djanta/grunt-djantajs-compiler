@@ -1,7 +1,7 @@
 # grunt-djantajs-compiler
 
-[![npm version](https://img.shields.io/npm/v/grunt-djantajs-compiler?style=flat)](https://www.npmjs.com/package/grunt-djantajs-compiler)
-[![npm downloads](https://img.shields.io/npm/dm/grunt-djantajs-compiler.svg?style=flat)](https://www.npmjs.com/package/grunt-djantajs-compiler)
+[![npm](https://img.shields.io/npm/v/grunt-djantajs-compiler.svg?style=flat)](https://www.npmjs.com/package/grunt-djantajs-compiler)
+[![npm downloads](https://img.shields.io/npm/dw/grunt-djantajs-compiler.svg?style=flat)](https://www.npmjs.com/package/grunt-djantajs-compiler)
 [![Travis](https://img.shields.io/travis/djanta/grunt-djantajs-compiler/master.svg?style=flat)](https://travis-ci.org/djanta/grunt-djantajs-compiler)
 [![Maintainability](https://api.codeclimate.com/v1/badges/e993001806df976e7459/maintainability)](https://codeclimate.com/github/djanta/grunt-djantajs-compiler/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/e993001806df976e7459/test_coverage)](https://codeclimate.com/github/djanta/grunt-djantajs-compiler/test_coverage)
