@@ -1,8 +1,107 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.12.0
+version: v1.13.5
 ignore: {}
 # patches apply the minimum changes required to fix a vulnerability
 patch:
   'npm:lodash:20180130':
     - '@djanta/djantajs-compiler-rc > parse-comments > lodash':
         patched: '2018-09-18T15:54:36.460Z'
+  SNYK-JS-LODASH-450202:
+    - '@djanta/djantajs-compiler-rc > snyk > snyk-nodejs-lockfile-parser > lodash':
+        patched: '2019-07-06T03:59:52.771Z'
+    - lodash:
+        patched: '2019-07-06T03:59:52.771Z'
+    - snyk > lodash:
+        patched: '2019-07-06T03:59:52.771Z'
+    - '@djanta/djantajs-compiler-core > snyk > lodash':
+        patched: '2019-07-06T03:59:52.771Z'
+    - grunt > grunt-legacy-log > lodash:
+        patched: '2019-07-06T03:59:52.771Z'
+    - '@djanta/djantajs-compiler-rc > @djanta/djantajs-compiler-core > lodash':
+        patched: '2019-07-06T03:59:52.771Z'
+    - snyk > @snyk/dep-graph > lodash:
+        patched: '2019-07-06T03:59:52.771Z'
+    - grunt-contrib-jshint > jshint > lodash:
+        patched: '2019-07-06T03:59:52.771Z'
+    - snyk > inquirer > lodash:
+        patched: '2019-07-06T03:59:52.771Z'
+    - grunt > grunt-legacy-util > lodash:
+        patched: '2019-07-06T03:59:52.771Z'
+    - snyk > snyk-config > lodash:
+        patched: '2019-07-06T03:59:52.771Z'
+    - snyk > snyk-mvn-plugin > lodash:
+        patched: '2019-07-06T03:59:52.771Z'
+    - snyk > snyk-nodejs-lockfile-parser > lodash:
+        patched: '2019-07-06T03:59:52.771Z'
+    - grunt-contrib-clean > async > lodash:
+        patched: '2019-07-06T03:59:52.771Z'
+    - snyk > snyk-nuget-plugin > lodash:
+        patched: '2019-07-06T03:59:52.771Z'
+    - snyk > snyk-nodejs-lockfile-parser > graphlib > lodash:
+        patched: '2019-07-06T03:59:52.771Z'
+    - '@djanta/djantajs-compiler-rc > snyk > inquirer > lodash':
+        patched: '2019-07-06T03:59:52.771Z'
+    - grunt > grunt-legacy-log > grunt-legacy-log-utils > lodash:
+        patched: '2019-07-06T03:59:52.771Z'
+    - snyk > snyk-go-plugin > graphlib > lodash:
+        patched: '2019-07-06T03:59:52.771Z'
+    - '@djanta/djantajs-compiler-rc > snyk > snyk-config > lodash':
+        patched: '2019-07-06T03:59:52.771Z'
+    - '@djanta/djantajs-compiler-rc > @djanta/djantajs-compiler-core > snyk > lodash':
+        patched: '2019-07-06T03:59:52.771Z'
+    - nyc > istanbul-lib-instrument > @babel/traverse > lodash:
+        patched: '2019-07-06T03:59:52.771Z'
+    - '@djanta/djantajs-compiler-rc > snyk > snyk-mvn-plugin > lodash':
+        patched: '2019-07-06T03:59:52.771Z'
+    - '@djanta/djantajs-compiler-rc > snyk > @snyk/dep-graph > lodash':
+        patched: '2019-07-06T03:59:52.771Z'
+    - '@djanta/djantajs-compiler-rc > lodash':
+        patched: '2019-07-06T03:59:52.771Z'
+    - '@djanta/djantajs-compiler-rc > snyk > snyk-nuget-plugin > lodash':
+        patched: '2019-07-06T03:59:52.771Z'
+    - snyk > @snyk/dep-graph > graphlib > lodash:
+        patched: '2019-07-06T03:59:52.771Z'
+    - snyk > snyk-php-plugin > @snyk/composer-lockfile-parser > lodash:
+        patched: '2019-07-06T03:59:52.771Z'
+    - '@djanta/djantajs-compiler-rc > @djanta/djantajs-compiler-core > snyk > snyk-nuget-plugin > lodash':
+        patched: '2019-07-06T03:59:52.771Z'
+    - '@djanta/djantajs-compiler-rc > snyk > snyk-php-plugin > @snyk/composer-lockfile-parser > lodash':
+        patched: '2019-07-06T03:59:52.771Z'
+    - '@djanta/djantajs-compiler-rc > @djanta/djantajs-compiler-core > snyk > snyk-nodejs-lockfile-parser > lodash':
+        patched: '2019-07-06T03:59:52.771Z'
+    - '@djanta/djantajs-compiler-rc > @djanta/djantajs-compiler-core > snyk > snyk-mvn-plugin > lodash':
+        patched: '2019-07-06T03:59:52.771Z'
+    - '@djanta/djantajs-compiler-rc > @djanta/djantajs-compiler-core > snyk > snyk-config > lodash':
+        patched: '2019-07-06T03:59:52.771Z'
+    - '@djanta/djantajs-compiler-rc > @djanta/djantajs-compiler-core > snyk > inquirer > lodash':
+        patched: '2019-07-06T03:59:52.771Z'
+    - '@djanta/djantajs-compiler-rc > @djanta/djantajs-compiler-core > snyk > @snyk/dep-graph > lodash':
+        patched: '2019-07-06T03:59:52.771Z'
+    - '@djanta/djantajs-compiler-core > snyk > snyk-nodejs-lockfile-parser > graphlib > lodash':
+        patched: '2019-07-06T03:59:52.771Z'
+    - '@djanta/djantajs-compiler-rc > snyk > @snyk/dep-graph > graphlib > lodash':
+        patched: '2019-07-06T03:59:52.771Z'
+    - '@djanta/djantajs-compiler-core > snyk > snyk-go-plugin > graphlib > lodash':
+        patched: '2019-07-06T03:59:52.771Z'
+    - nyc > istanbul-lib-instrument > @babel/generator > @babel/types > lodash:
+        patched: '2019-07-06T03:59:52.771Z'
+    - nyc > istanbul-lib-instrument > @babel/traverse > @babel/generator > @babel/types > lodash:
+        patched: '2019-07-06T03:59:52.771Z'
+    - '@djanta/djantajs-compiler-rc > @djanta/djantajs-compiler-core > snyk > snyk-go-plugin > graphlib > lodash':
+        patched: '2019-07-06T03:59:52.771Z'
+    - '@djanta/djantajs-compiler-rc > @djanta/djantajs-compiler-core > snyk > snyk-php-plugin > @snyk/composer-lockfile-parser > lodash':
+        patched: '2019-07-06T03:59:52.771Z'
+    - '@djanta/djantajs-compiler-rc > @djanta/djantajs-compiler-core > snyk > snyk-nodejs-lockfile-parser > graphlib > lodash':
+        patched: '2019-07-06T03:59:52.771Z'
+    - '@djanta/djantajs-compiler-rc > @djanta/djantajs-compiler-core > snyk > @snyk/dep-graph > graphlib > lodash':
+        patched: '2019-07-06T03:59:52.771Z'
+    - nyc > istanbul-lib-instrument > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash:
+        patched: '2019-07-06T03:59:52.771Z'
+    - grunt-contrib-nodeunit > nodeunit-x > tap > nyc > istanbul-lib-instrument > @babel/types > lodash:
+        patched: '2019-07-06T03:59:52.771Z'
+    - grunt-contrib-nodeunit > nodeunit-x > tap > nyc > istanbul-lib-instrument > @babel/traverse > @babel/generator > lodash:
+        patched: '2019-07-06T03:59:52.771Z'
+    - grunt-contrib-nodeunit > nodeunit-x > tap > nyc > istanbul-lib-instrument > @babel/traverse > @babel/helper-function-name > @babel/types > lodash:
+        patched: '2019-07-06T03:59:52.771Z'
+    - grunt-contrib-nodeunit > nodeunit-x > tap > nyc > istanbul-lib-instrument > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2019-07-06T03:59:52.771Z'
