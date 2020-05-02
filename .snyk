@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.13.5
+version: v1.14.1
 ignore: {}
 # patches apply the minimum changes required to fix a vulnerability
 patch:
@@ -105,3 +105,36 @@ patch:
         patched: '2019-07-06T03:59:52.771Z'
     - grunt-contrib-nodeunit > nodeunit-x > tap > nyc > istanbul-lib-instrument > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
         patched: '2019-07-06T03:59:52.771Z'
+  SNYK-JS-LODASH-567746:
+    - lodash:
+        patched: '2020-05-02T04:00:11.443Z'
+    - '@djanta/djantajs-compiler-rc > lodash':
+        patched: '2020-05-02T04:00:11.443Z'
+    - '@djanta/djantajs-compiler-rc > @djanta/djantajs-compiler-core > lodash':
+        patched: '2020-05-02T04:00:11.443Z'
+    - grunt > grunt-legacy-log > lodash:
+        patched: '2020-05-02T04:00:11.443Z'
+    - grunt > grunt-legacy-util > lodash:
+        patched: '2020-05-02T04:00:11.443Z'
+    - grunt-contrib-clean > async > lodash:
+        patched: '2020-05-02T04:00:11.443Z'
+    - grunt-contrib-jshint > jshint > lodash:
+        patched: '2020-05-02T04:00:11.443Z'
+    - grunt > grunt-legacy-log > grunt-legacy-log-utils > lodash:
+        patched: '2020-05-02T04:00:11.443Z'
+    - nyc > istanbul-lib-instrument > @babel/traverse > lodash:
+        patched: '2020-05-02T04:00:11.443Z'
+    - nyc > istanbul-lib-instrument > @babel/traverse > @babel/generator > lodash:
+        patched: '2020-05-02T04:00:11.443Z'
+    - nyc > istanbul-lib-instrument > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash:
+        patched: '2020-05-02T04:00:11.443Z'
+    - nyc > istanbul-lib-instrument > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash:
+        patched: '2020-05-02T04:00:11.443Z'
+    - grunt-contrib-nodeunit > nodeunit-x > tap > nyc > istanbul-lib-instrument > @babel/traverse > lodash:
+        patched: '2020-05-02T04:00:11.443Z'
+    - grunt-contrib-nodeunit > nodeunit-x > tap > nyc > istanbul-lib-instrument > @babel/traverse > @babel/generator > lodash:
+        patched: '2020-05-02T04:00:11.443Z'
+    - grunt-contrib-nodeunit > nodeunit-x > tap > nyc > istanbul-lib-instrument > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash:
+        patched: '2020-05-02T04:00:11.443Z'
+    - grunt-contrib-nodeunit > nodeunit-x > tap > nyc > istanbul-lib-instrument > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash:
+        patched: '2020-05-02T04:00:11.443Z'
