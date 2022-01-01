@@ -55,9 +55,9 @@
   "devDependencies": {
     "grunt-contrib-jshint": "^1.1.0",
     "grunt-contrib-clean": "^2.0.0",
-    "grunt-contrib-nodeunit": "^2.0.0",
+    "grunt-contrib-nodeunit": "^4.0.0",
     "grunt": "^1.0.3",
-    "nyc": "^13.0.1"
+    "nyc": "^15.0.0"
   },
   "dependencies": {
     "dateformat": "^3.0.3",
